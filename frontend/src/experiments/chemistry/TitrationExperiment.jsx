@@ -2,6 +2,7 @@ import chemistryData from "../../data/chemistry.json";
 import InstructionPanel from "../../components/InstructionPanel";
 import BackButton from "../../components/BackButton";
 import Quiz from "../../components/Quiz";
+import ExperimentNotesPanel from "../../components/ExperimentNotesPanel";
 
 const TitrationExperiment = () => {
   const experiment = chemistryData.experiments.find(
@@ -60,6 +61,9 @@ const TitrationExperiment = () => {
       />
 
       <Quiz experimentId="titration-experiment" subject="chemistry" />
+      <div style={{ marginTop: "24px" }}>
+        <ExperimentNotesPanel experimentId="titration-experiment" />
+      </div>
     </div>
   );
 };
